@@ -4,10 +4,10 @@ import com.test.springboot.v2.demo.dao.UserInfoDao;
 import com.test.springboot.v2.demo.dao.mybatis.mapper.UserInfoMapper;
 import com.test.springboot.v2.demo.dao.mybatis.vo.UserInfo;
 import com.test.springboot.v2.demo.dao.mybatis.vo.UserInfoExample;
-import org.springframework.stereotype.Repository;
-
-import javax.annotation.Resource;
+import java.lang.Long;
 import java.util.List;
+import javax.annotation.Resource;
+import org.springframework.stereotype.Repository;
 
 
 
