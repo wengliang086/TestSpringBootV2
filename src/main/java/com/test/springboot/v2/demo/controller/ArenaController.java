@@ -20,6 +20,16 @@ public class ArenaController {
         return arenaService.add(arenaInfo);
     }
 
+    @GetMapping("delete")
+    public Object delete(long arenaId) {
+        return arenaService.delete(arenaId);
+    }
+
+    @GetMapping("update")
+    public Object update(ArenaInfo arenaInfo) {
+        return arenaService.update(arenaInfo);
+    }
+
     @GetMapping("findAll")
     public Object findAll() {
         return arenaService.findAll();

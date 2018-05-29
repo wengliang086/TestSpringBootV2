@@ -9,4 +9,8 @@ public interface ArenaService {
     ArenaInfo add(ArenaInfo userInfo);
 
     List<ArenaInfo> findAll();
+
+    ArenaInfo delete(long arenaId);
+
+    ArenaInfo update(ArenaInfo arenaInfo);
 }

@@ -6,7 +6,9 @@ import java.util.List;
 
 public interface UserService {
 
-    UserInfo addUser(UserInfo userInfo);
+    UserInfo addUser(UserInfo userInfo, String code);
+
+    UserInfo login(String phone, String password);
 
     List<UserInfo> findAll();
 }

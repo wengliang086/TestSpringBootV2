@@ -4,7 +4,12 @@ import com.test.springboot.v2.demo.dao.ArenaInfoDao;
 import com.test.springboot.v2.demo.dao.mybatis.mapper.ArenaInfoMapper;
 import com.test.springboot.v2.demo.dao.mybatis.vo.ArenaInfo;
 import java.lang.Long;
+import java.util.List;
 import javax.annotation.Resource;
+
+import com.test.springboot.v2.demo.dao.mybatis.vo.ArenaInfoExample;
+import com.test.springboot.v2.demo.dao.mybatis.vo.UserInfo;
+import com.test.springboot.v2.demo.dao.mybatis.vo.UserInfoExample;
 import org.springframework.stereotype.Repository;
 
 
@@ -38,6 +43,13 @@ public class ArenaInfoDaoImpl implements ArenaInfoDao {
 	
 	 
 	////*******自定义开始********//
+
+	@Override
+	public List<ArenaInfo> findAll() {
+		ArenaInfoExample example = new ArenaInfoExample();
+		return arenaInfoMapper.selectByExample(example);
+	}
+
 	//**********自定义结束*****////
 	
 }

@@ -15,9 +15,16 @@ public class UserController {
     @Resource
     private UserService userService;
 
+    //add?phone=12311112222&password=123456&code=111111
     @GetMapping("add")
-    public Object addUser(UserInfo userInfo) {
-        return userService.addUser(userInfo);
+    public Object addUser(UserInfo userInfo, String code) {
+        return userService.addUser(userInfo, code);
+    }
+
+    //login?phone=12311112222&password=123456
+    @GetMapping("login")
+    public Object login(String phone, String password) {
+        return userService.login(phone, password);
     }
 
     @GetMapping("findAll")

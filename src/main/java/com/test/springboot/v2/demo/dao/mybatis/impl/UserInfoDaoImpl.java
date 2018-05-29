@@ -42,6 +42,13 @@ public class UserInfoDaoImpl implements UserInfoDao {
 	////*******自定义开始********//
 
 	@Override
+	public List<UserInfo> getByPhone(String phone) {
+		UserInfoExample example = new UserInfoExample();
+		example.createCriteria().andPhoneEqualTo(phone);
+		return userInfoMapper.selectByExample(example);
+	}
+
+	@Override
 	public List<UserInfo> findAll() {
 		UserInfoExample example = new UserInfoExample();
 		return userInfoMapper.selectByExample(example);
