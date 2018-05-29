@@ -1,7 +1,7 @@
 package com.test.springboot.v2.demo.controller;
 
-import com.test.springboot.v2.demo.dao.mybatis.vo.UserInfo;
-import com.test.springboot.v2.demo.service.UserService;
+import com.test.springboot.v2.demo.dao.mybatis.vo.ArenaInfo;
+import com.test.springboot.v2.demo.service.ArenaService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,19 +9,19 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 
 @RestController
-@RequestMapping("user/")
-public class UserController {
+@RequestMapping("arena")
+public class ArenaController {
 
     @Resource
-    private UserService userService;
+    private ArenaService arenaService;
 
     @GetMapping("add")
-    public Object addUser(UserInfo userInfo) {
-        return userService.addUser(userInfo);
+    public Object add(ArenaInfo arenaInfo) {
+        return arenaService.add(arenaInfo);
     }
 
     @GetMapping("findAll")
     public Object findAll() {
-        return userService.findAll();
+        return arenaService.findAll();
     }
 }
