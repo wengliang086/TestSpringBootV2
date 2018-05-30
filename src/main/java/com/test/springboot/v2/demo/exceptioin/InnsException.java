@@ -9,6 +9,11 @@ public class InnsException extends RuntimeException implements ResultCode {
         this.code = resultCode.getCode();
     }
 
+    public InnsException(String message) {
+        super(message);
+        this.code = 200;
+    }
+
     public InnsException(String message, Integer code) {
         super(message);
         this.code = code;

@@ -15,16 +15,19 @@ public class ArenaController {
     @Resource
     private ArenaService arenaService;
 
+    //add?uid=1000&title=t1&arenaDescribe=desc1
     @GetMapping("add")
-    public Object add(ArenaInfo arenaInfo) {
-        return arenaService.add(arenaInfo);
+    public Object add(ArenaInfo arenaInfo, long uid) {
+        return arenaService.add(arenaInfo, uid);
     }
 
+    //delete?arenaId=2
     @GetMapping("delete")
     public Object delete(long arenaId) {
         return arenaService.delete(arenaId);
     }
 
+    //update?id=1&uid=1000&title=t11&arenaDescribe=desc1
     @GetMapping("update")
     public Object update(ArenaInfo arenaInfo) {
         return arenaService.update(arenaInfo);

@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface ArenaService {
 
-    ArenaInfo add(ArenaInfo userInfo);
+    ArenaInfo add(ArenaInfo userInfo, long uid);
 
     List<ArenaInfo> findAll();
 

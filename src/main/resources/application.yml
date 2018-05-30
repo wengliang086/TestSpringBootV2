@@ -38,3 +38,7 @@ pagehelper:
   support-methods-arguments: true
   params: count=countSql
 
+# ¥Ú”°sql
+logging:
+  level:
+    com.test.springboot.v2.demo.dao.mybatis.mapper: debug

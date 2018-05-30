@@ -3,7 +3,6 @@ package com.test.springboot.v2.demo.dao;
 import com.test.springboot.v2.demo.dao.mybatis.vo.ArenaInfo;
 import com.test.springboot.v2.demo.dao.mybatis.vo.UserInfo;
 import com.test.springboot.v2.demo.dao.mybatis.vo.UserInfoExample;
-
 import java.lang.Long;
 import java.util.List;
 

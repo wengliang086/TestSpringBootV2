@@ -21,6 +21,12 @@ public class UserController {
         return userService.addUser(userInfo, code);
     }
 
+    //getRegisterCode?phone=12311112222
+    @GetMapping("getRegisterCode")
+    public Object getRegisterCode(String phone, String code) {
+        return userService.getRegisterCode(phone);
+    }
+
     //login?phone=12311112222&password=123456
     @GetMapping("login")
     public Object login(String phone, String password) {

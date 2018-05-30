@@ -14,6 +14,7 @@ import org.springframework.stereotype.Repository;
 import javax.annotation.Resource;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
 import java.util.regex.Pattern;
 
 @Repository
@@ -41,6 +42,47 @@ public class UserServiceImpl implements UserService {
         userInfo.setCreateDate(new Date());
         userInfoDao.save(userInfo);
         return userInfo;
+    }
+
+    @Override
+    public Integer getRegisterCode(String phone) {
+        checkPhone(phone);
+        List<UserInfo> userInfos = userInfoDao.getByPhone(phone);
+        if (userInfos != null && userInfos.size() > 0) {
+            throw new InnsException(InnsExceptionEnum.PHONE_ALREDAY_EXIST);
+        }
+        checkGetCode(phone, 60000);
+        int verificationCode = gen6BitCode();
+        CodeInfo codeInfo = codeInfoDao.get(phone);
+        if (codeInfo == null) {
+            codeInfo = new CodeInfo();
+            codeInfo.setPhone(phone);
+            codeInfo.setCreateDate(new Date());
+            codeInfo.setCode(verificationCode);
+            codeInfo.setUsed(false);
+            codeInfoDao.save(codeInfo);
+        } else {
+            codeInfo.setCreateDate(new Date());
+            codeInfo.setCode(verificationCode);
+            codeInfo.setUsed(false);
+            codeInfoDao.update(codeInfo);
+        }
+        return verificationCode;
+    }
+
+    // 生成验证码(简单起见，生成100000 到 999999之间的随机数)
+    private int gen6BitCode() {
+        return (new Random().nextInt(900000) + 100000);
+    }
+
+    private CodeInfo checkGetCode(String phone, int time) {
+        CodeInfo codeInfo = codeInfoDao.get(phone);
+        if (codeInfo != null) {
+            if (codeInfo.getCreateDate().getTime() + time > System.currentTimeMillis()) {
+                throw new InnsException(InnsExceptionEnum.OPERATION_TOO_FREQUENT);
+            }
+        }
+        return codeInfo;
     }
 
     @Override

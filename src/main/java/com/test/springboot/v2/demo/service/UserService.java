@@ -8,6 +8,8 @@ public interface UserService {
 
     UserInfo addUser(UserInfo userInfo, String code);
 
+    Integer getRegisterCode(String phone);
+
     UserInfo login(String phone, String password);
 
     List<UserInfo> findAll();

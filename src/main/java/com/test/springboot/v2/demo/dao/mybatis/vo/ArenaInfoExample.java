@@ -446,73 +446,73 @@ public class ArenaInfoExample {
             return (Criteria) this;
         }
 
-        public Criteria andDescribeIsNull() {
-            addCriterion("describe is null");
+        public Criteria andArenaDescribeIsNull() {
+            addCriterion("arena_describe is null");
             return (Criteria) this;
         }
 
-        public Criteria andDescribeIsNotNull() {
-            addCriterion("describe is not null");
+        public Criteria andArenaDescribeIsNotNull() {
+            addCriterion("arena_describe is not null");
             return (Criteria) this;
         }
 
-        public Criteria andDescribeEqualTo(String value) {
-            addCriterion("describe =", value, "describe");
+        public Criteria andArenaDescribeEqualTo(String value) {
+            addCriterion("arena_describe =", value, "arenaDescribe");
             return (Criteria) this;
         }
 
-        public Criteria andDescribeNotEqualTo(String value) {
-            addCriterion("describe <>", value, "describe");
+        public Criteria andArenaDescribeNotEqualTo(String value) {
+            addCriterion("arena_describe <>", value, "arenaDescribe");
             return (Criteria) this;
         }
 
-        public Criteria andDescribeGreaterThan(String value) {
-            addCriterion("describe >", value, "describe");
+        public Criteria andArenaDescribeGreaterThan(String value) {
+            addCriterion("arena_describe >", value, "arenaDescribe");
             return (Criteria) this;
         }
 
-        public Criteria andDescribeGreaterThanOrEqualTo(String value) {
-            addCriterion("describe >=", value, "describe");
+        public Criteria andArenaDescribeGreaterThanOrEqualTo(String value) {
+            addCriterion("arena_describe >=", value, "arenaDescribe");
             return (Criteria) this;
         }
 
-        public Criteria andDescribeLessThan(String value) {
-            addCriterion("describe <", value, "describe");
+        public Criteria andArenaDescribeLessThan(String value) {
+            addCriterion("arena_describe <", value, "arenaDescribe");
             return (Criteria) this;
         }
 
-        public Criteria andDescribeLessThanOrEqualTo(String value) {
-            addCriterion("describe <=", value, "describe");
+        public Criteria andArenaDescribeLessThanOrEqualTo(String value) {
+            addCriterion("arena_describe <=", value, "arenaDescribe");
             return (Criteria) this;
         }
 
-        public Criteria andDescribeLike(String value) {
-            addCriterion("describe like", value, "describe");
+        public Criteria andArenaDescribeLike(String value) {
+            addCriterion("arena_describe like", value, "arenaDescribe");
             return (Criteria) this;
         }
 
-        public Criteria andDescribeNotLike(String value) {
-            addCriterion("describe not like", value, "describe");
+        public Criteria andArenaDescribeNotLike(String value) {
+            addCriterion("arena_describe not like", value, "arenaDescribe");
             return (Criteria) this;
         }
 
-        public Criteria andDescribeIn(List<String> values) {
-            addCriterion("describe in", values, "describe");
+        public Criteria andArenaDescribeIn(List<String> values) {
+            addCriterion("arena_describe in", values, "arenaDescribe");
             return (Criteria) this;
         }
 
-        public Criteria andDescribeNotIn(List<String> values) {
-            addCriterion("describe not in", values, "describe");
+        public Criteria andArenaDescribeNotIn(List<String> values) {
+            addCriterion("arena_describe not in", values, "arenaDescribe");
             return (Criteria) this;
         }
 
-        public Criteria andDescribeBetween(String value1, String value2) {
-            addCriterion("describe between", value1, value2, "describe");
+        public Criteria andArenaDescribeBetween(String value1, String value2) {
+            addCriterion("arena_describe between", value1, value2, "arenaDescribe");
             return (Criteria) this;
         }
 
-        public Criteria andDescribeNotBetween(String value1, String value2) {
-            addCriterion("describe not between", value1, value2, "describe");
+        public Criteria andArenaDescribeNotBetween(String value1, String value2) {
+            addCriterion("arena_describe not between", value1, value2, "arenaDescribe");
             return (Criteria) this;
         }
 
