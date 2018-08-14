@@ -1,3 +1,5 @@
+#### Swagger2
+* http://193.112.46.75:8080/swagger-ui.html 
 #### 注册
 * http://193.112.46.75:8080/user/add?phone=12311112222&password=123456&code=111111
 #### 获取验证码
