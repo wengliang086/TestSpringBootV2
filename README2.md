@@ -17,7 +17,7 @@
     - 异步非阻塞：异步Servlet（3.0）、非阻塞Servlet（3.1）
 2. Web Reactive: Netty Web Server
 
-## 3、生成准备特性
+## 3、生产准备特性
 1. 指标（Metrics）：/actuator/metrics
 2. 健康检查（Health Check）：/actuator/health
 3. 外部化配置（Externalized Configuration）：/actuator/configprops
