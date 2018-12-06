@@ -3,6 +3,15 @@
 ## 1、组件自动装配
 
 1. @EableAutoConfiguration
+    
+    手动装配
+    1. @Configuration
+    2. ImportSelector
+    3. 条件装配
+    
+    * @Profile
+    * @Conditional
+    
 2. /META-INF/spring.factories
 3. XXXAutoConfiguration
 
