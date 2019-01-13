@@ -6,6 +6,19 @@
 </head>
 <body>
 <h2>thymeleaf 跳转到 success 页面</h2>
-<div th:text="${key1}"></div>
+
+<div id="div01" class="myDiv" th:id="${hello}" th:class="${hello}" th:text="${hello}">这里显示欢迎信息</div>
+
+<hr/>
+<div th:text="${hello}"></div>
+<div th:utext="${hello}"></div>
+<hr/>
+
+<h4 th:text="${user}" th:each="user:${users}"></h4>
+<hr/>
+<h4>
+    <span th:each="user:${users}">[[${user}]]</span>
+</h4>
+
 </body>
 </html>
